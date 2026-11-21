@@ -1,0 +1,19 @@
+[Unit]
+Description=PhotoLib unified identity provider
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=photolib-idp
+Group=photolib-idp
+WorkingDirectory=/opt/photolib-idp
+ExecStart=/opt/photolib-idp/photolib-idp
+StateDirectory=photolib-idp
+StateDirectoryMode=0700
+PrivateTmp=true
+NoNewPrivileges=true
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
