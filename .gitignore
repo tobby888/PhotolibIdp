@@ -1,0 +1,6 @@
+/photolib-idp
+/photolib-idp.exe
+/data/
+/frontend/node_modules/
+/webui/dist/
+.env
